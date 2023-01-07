@@ -1,12 +1,12 @@
 var listArticle = [
     {
         "id" : 1,
-        "title": "Le welsh, plat du Nord ou d'ailleurs?",
-        "publicationDate" : "2021-01-19",
-        "image" : "image/welsh.jpg",
-        "content" : `Le welsh, aussi appelé welsh rabbit ou welsh rarebit1 ou parfois croque gallois2, est un plat d'origine galloise, à base de cheddar fondu (originellement, on utilisait du chester).
+        "title": "La baleine bleue",
+        "publicationDate" : "2021-02-25",
+        "image" : "image/baleine-bleu.jpg",
+        "content" : `La baleine bleue (Balaenoptera musculus), appelée aussi rorqual bleu, est une espèce de cétacés de la famille des Balaenopteridae. Pouvant dépasser 30 mètres de longueur et 170 tonnes, c'est le plus gros animal vivant à notre époque et dans l'état actuel des connaissances, le plus gros (avant deux grands sauropodes dont le Diplodocus hallorum) ayant vécu sur Terre.
 
-        Il est traditionnellement servi sur une tranche de pain grillé, le tout passé au four. En France, le welsh est typiquement servi dans les brasseries de la Côte d'Opale (et d'une manière générale, du Nord et du Pas-de-Calais), où il est désormais bien ancré dans la culture régionale.`
+        Long et mince, le corps de la baleine bleue peut prendre diverses teintes de gris-bleuté sur le dos et un peu plus clair en dessous. On dénombre au moins trois sous-espèces distinctes : B. m. musculus dans l’Atlantique Nord et le Pacifique Nord, B. m. intermedia de l’océan Antarctique et B. m. brevicauda découverte dans l’océan Indien et dans le sud de l’océan Pacifique. B. m. indica, découverte dans l’océan Indien, pourrait être une autre sous-espèce. Comme les autres baleines, la baleine bleue se nourrit essentiellement d’un petit crustacé, le krill, de planctons mais également de petits poissons et parfois de calmars.`
     },
     {
         "id" : 2,
@@ -41,12 +41,12 @@ var listArticle = [
     },
     {
         "id" : 5,
-        "title": "La baleine bleue",
-        "publicationDate" : "2021-02-25",
-        "image" : "image/baleine-bleu.jpg",
-        "content" : `La baleine bleue (Balaenoptera musculus), appelée aussi rorqual bleu, est une espèce de cétacés de la famille des Balaenopteridae. Pouvant dépasser 30 mètres de longueur et 170 tonnes, c'est le plus gros animal vivant à notre époque et dans l'état actuel des connaissances, le plus gros (avant deux grands sauropodes dont le Diplodocus hallorum) ayant vécu sur Terre.
+        "title": "Le welsh, plat du Nord ou d'ailleurs?",
+        "publicationDate" : "2021-01-19",
+        "image" : "image/welsh.jpg",
+        "content" : `Le welsh, aussi appelé welsh rabbit ou welsh rarebit1 ou parfois croque gallois2, est un plat d'origine galloise, à base de cheddar fondu (originellement, on utilisait du chester).
 
-        Long et mince, le corps de la baleine bleue peut prendre diverses teintes de gris-bleuté sur le dos et un peu plus clair en dessous. On dénombre au moins trois sous-espèces distinctes : B. m. musculus dans l’Atlantique Nord et le Pacifique Nord, B. m. intermedia de l’océan Antarctique et B. m. brevicauda découverte dans l’océan Indien et dans le sud de l’océan Pacifique. B. m. indica, découverte dans l’océan Indien, pourrait être une autre sous-espèce. Comme les autres baleines, la baleine bleue se nourrit essentiellement d’un petit crustacé, le krill, de planctons mais également de petits poissons et parfois de calmars.`
+        Il est traditionnellement servi sur une tranche de pain grillé, le tout passé au four. En France, le welsh est typiquement servi dans les brasseries de la Côte d'Opale (et d'une manière générale, du Nord et du Pas-de-Calais), où il est désormais bien ancré dans la culture régionale.`
     }
 ];
 
