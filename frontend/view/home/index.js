@@ -16,6 +16,8 @@
 // 6°) LORSQUE VOUS AVEZ EXPORTÉ CES FONCTIONS DANS favorisManager.js, LES IMPORTER DANS CE FICHIER (https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/export#exemples)
 // 6.5°) UTILISER CES FONCTIONS IMPORTÉS POUR COMPLÉTER L'ÉVÈNEMENT CRÉÉ EN 3°) AFIN DE POUVOIR AJOUTER L'ARTICLE AU FAVORIS, ET INVERSEMENT L'ENLEVER DES FAVORIS.
 
+import ListArticles from "../../js/ListArticles.js"
+import Article from "../../js/Article.js"
 
 
 fetch("http://localhost:4000/api/article")
@@ -23,13 +25,14 @@ fetch("http://localhost:4000/api/article")
     .then(data=>{
         // data// PUT YOUR CODE HERE IN CASE OF !!!SUCCESS!!!}
         console.log('data:', data)
-        data.forEach((item,i) => {
-            
+        const listArticles = new ListArticles(data)
+        listArticles.articles.forEach((item,i) => {
+            item = new Article(item)
             $('.container')[0].innerHTML += `
                 <div class="col-12 mt-5">
                     <div class="card article">
                         <div class="card-header ">
-                            <h5 class="card-title d-flex justify-content-between">${item.title}<span class="publication-date">${item.publicationDate}</span></h5>
+                            <h5 class="card-title d-flex justify-content-between">${item.title}<span class="publication-date">${item.convertDate()}</span></h5>
                         </div>
                         <img src="http://localhost:4000/${item.image}" class="card-img-top">
                         <span class="fa-stack fa-2x addFavorite">
