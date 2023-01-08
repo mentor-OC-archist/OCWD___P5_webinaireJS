@@ -56,5 +56,3 @@ h1{
 .article .addFavorite.active{
     color: yellow;
 }
-form input{transition:background .3s;}
-form input:not([type="submit"]):placeholder-shown{background:white}

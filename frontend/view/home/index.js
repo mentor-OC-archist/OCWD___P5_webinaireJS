@@ -14,10 +14,12 @@
 // VOUS POUVEZ LES CRÉER ICI POUR TESTER LEUR FONCTIONNEMENT AVANT DE LES COUPER-COLLER DANS favorisManager.js
 // VOUS POUVEZ ALORS AUSSI COMPLÉTER L'ÉVÈNEMENT CRÉÉ EN 3°) AFIN DE POUVOIR AJOUTER L'ARTICLE AU FAVORIS, ET INVERSEMENT L'ENLEVER DES FAVORIS.
 // 6°) LORSQUE VOUS AVEZ EXPORTÉ CES FONCTIONS DANS favorisManager.js, LES IMPORTER DANS CE FICHIER (https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/export#exemples)
-// 6.5°) UTILISER CES FONCTIONS IMPORTÉS POUR COMPLÉTER L'ÉVÈNEMENT CRÉÉ EN 3°) AFIN DE POUVOIR AJOUTER L'ARTICLE AU FAVORIS, ET INVERSEMENT L'ENLEVER DES FAVORIS.
+// 6.5°) UTILISER CES FONCTIONS IMPORTÉS POUR COMPLÉTER L'ÉVÈNEMENT CRÉÉ EN 4°) AFIN DE POUVOIR AJOUTER L'ARTICLE AU FAVORIS, ET INVERSEMENT L'ENLEVER DES FAVORIS.
 
 import ListArticles from "../../js/ListArticles.js"
 import Article from "../../js/Article.js"
+import * as Favs from "../../js/favorisManager.js"
+
 
 
 fetch("http://localhost:4000/api/article")
@@ -35,7 +37,7 @@ fetch("http://localhost:4000/api/article")
                             <h5 class="card-title d-flex justify-content-between">${item.title}<span class="publication-date">${item.convertDate()}</span></h5>
                         </div>
                         <img src="http://localhost:4000/${item.image}" class="card-img-top">
-                        <span class="fa-stack fa-2x addFavorite">
+                        <span data-id="${item.id}" class="fa-stack fa-2x addFavorite">
                             <i class="fas fa-star fa-stack-1x"></i>
                             <i class="far fa-star fa-stack-1x"></i>
                         </span>
@@ -45,7 +47,18 @@ fetch("http://localhost:4000/api/article")
                     </div>
                 </div>
             `
-            return ;
+        })
+        // console.log($('.addFavorite'));
+        Array.from($('.addFavorite')).forEach(elt=>{
+            elt.addEventListener('click', e=>{
+                // console.log(e.target);
+                const star = e.target.classList.contains("addFavorite") ? e.target : e.target.closest('.addFavorite')
+                // console.log(star);
+                star.classList.toggle('active')
+                if(star.classList.contains('active')){
+                    Favs.addArticle(star.dataset.id)
+                }else Favs.deleteArticle(star.dataset.id)
+            })
         })
     })
     .catch(error=>{console.error("/*PUT YOUR CODE HERE IN CASE OF !!!FAILURE!!!*/", error)})

@@ -11,3 +11,30 @@
 // 7°) EXPORTER TOUTES LE FONCTION À L'AIDE DE: https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/export#utilisation_dexports_nommés
 
 
+
+export function getAllFavoris(){
+    return JSON.parse(localStorage.listFavorites || "[]")
+}
+
+
+export function saveArticle(object, key="listFavorites"){
+    localStorage[key] = JSON.stringify(object)
+}
+
+
+export function addArticle(articleID){
+    localStorage.listFavorites = JSON.stringify([...getAllFavoris(), {id: parseInt(articleID), timestamp: +new Date()}])
+}
+
+
+export function deleteArticle(articleID){
+    localStorage.listFavorites = JSON.stringify(getAllFavoris().filter(item=>item.id!=articleID))
+}
+
+
+export function getFavorisIDs(){
+    return getAllFavoris().map(item=>item.id)
+}
+
+
+
