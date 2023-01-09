@@ -8,16 +8,9 @@
 // 3°) CRÉER UNE MÉTHODE POUR FORMATER UN DATE EN FRANÇAIS
 // 4°) C'EST TOUT :b
 
+import * as Favs from "./favorisManager.js"
 
 export default class Article {
-    // Public field declarations
-    // publicField = 0;
-    // Public Static field declarations
-    // static staticField = 0;
-    // Private field declarations
-    // #privateField = 0;
-    // Private Static field declarations
-    // static #privateStaticField = 0;
     constructor(article) {
         // super()
         article && Object.assign(this,article)
@@ -29,8 +22,26 @@ export default class Article {
         return convertedDate        
     }
     
-    static render() {
+    static render(article, isFav) {
         
+        article = new this(article)
+        $('.container')[0].innerHTML += `
+            <div class="col-12 mt-5">
+                <div class="card article">
+                    <div class="card-header ">
+                        <h5 class="card-title d-flex justify-content-between">${article.title}<span class="publication-date">${article.convertDate()}</span></h5>
+                    </div>
+                    <img src="http://localhost:4000/${article.image}" class="card-img-top">
+                    <span data-id="${article.id}" class="fa-stack fa-2x addFavorite ${isFav || Favs.getFavorisIDs().includes(article.id)?"active":""}">
+                        <i class="fas fa-star fa-stack-1x"></i>
+                        <i class="far fa-star fa-stack-1x"></i>
+                    </span>
+                    <div class="card-body">
+                        <p class="card-text">${article.content}</p>
+                    </div>
+                </div>
+            </div>
+        `
     }
     
 }

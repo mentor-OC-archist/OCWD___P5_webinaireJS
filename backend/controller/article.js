@@ -9,5 +9,6 @@ exports.getById = (req, res, next) => {
 }
 
 exports.getFavorites = (req, res, next) => {
+    console.log(req.body);
     res.status(200).json(articleManager.getFavorites(req.body.favorites));
 }
