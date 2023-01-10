@@ -13,6 +13,7 @@
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
         crossorigin="anonymous" />
     <link rel="stylesheet" href="../../css/style.css">
+    <script src="index.js" defer></script>
 </head>
 
 <body>
@@ -50,20 +51,20 @@
         <h1>Contactez nous !</h1>
         <form id="form" class="form row" action="../home/index.html">
             <fieldset class="form-group col-12">
-                <label>Nom, Prénom</label>
-                <input type="text" name="noms" class="form-control" placeholder="Séparer nom(CAPITAL) et prénoms(Titre) par une virgule et un espace, ex: SMITH, John, Anderson" />
+                <label for="noms">Nom, Prénom</label>
+                <input id="noms" type="text" name="noms" class="form-control" pattern="[A-Z]+(, [A-Z][a-z]+)+" title="Séparer nom(CAPITAL) et prénoms(Titre) par une virgule et un espace" placeholder="ex: SMITH, John, Anderson" required />
             </fieldset>
             <fieldset class="form-group col-12">
-                <label>E-mail</label>
-                <input type="email" name="email" class="form-control"  />
+                <label for="email">E-mail</label>
+                <input id="email" type="email" name="email" class="form-control" placeholder="exemple@email.com" required />
             </fieldset>
             <fieldset class="form-group col-12">
-                <label>Âge</label>
-                <input type="number" name="age" class="form-control"  />
+                <label for="age">Âge</label>
+                <input id="age" type="number" name="age" class="form-control" min="18" max="120" placeholder="Être majeur est nécessaire: 18-120 ans" required />
             </fieldset>
             <fieldset class="form-group col-12">
-                <label>Votre message</label>
-                <textarea name="message" class="form-control" rows="5" ></textarea>
+                <label for="message">Votre message</label>
+                <textarea id="message" name="message" class="form-control" rows="5" minlength="10" maxlength="5000" placeholder="Veuillez impérativement entrer un message (10-5000 caractères)" required ></textarea>
             </fieldset>
             <fieldset class="form-group col-12">
                 <input type="submit" name="submit" class="btn btn-primary col-12" value="envoyer">

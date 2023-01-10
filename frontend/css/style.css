@@ -1,3 +1,26 @@
+label{display:block;}
+input:valid:not([type="submit"]),textarea.valid{
+    background: greenyellow;
+}
+input:invalid,textarea.invalid{
+    background: orangered;
+}
+input:placeholder-shown,textarea:placeholder-shown{
+    background: whitesmoke;
+}
+
+
+
+
+
+
+
+
+
+
+/**********************ENTRER CI-DESSUS VOTRE CODE CSS POUR LA PARTIE "contact" DU WEBINAIRE*******************/
+/***************************************************************************************************************/
+/***************************************************************************************************************/
 body{
     background-color: #303030;
     font-family: "Calibri";

@@ -25,8 +25,12 @@ app.use((req, res, next) => {
 }); 
 
 app.use("/api/article", articleRoute);
-app.post("/api/contact", (req,res) => {
-  res.status(200).json({confirmID:"d:p je suis une message de confirmation!!!!!!!!!!!!!!!!", ...req.body});
-});
+app.post('/api/contact', (req,res)=>{
+  const o = req.body
+  // console.log(o);
+  if(o.datas && o.datas.noms && o.datas.email && o.datas.age && o.datas.message)
+      res.status(200).json({confirmID: "!_JE_SUIS_UN_NUMÉRO_DE_CODE_!"});
+  else res.status(400).json({message: "l'objet envoyé ne correspond pas à ce que attend le serveur"});
+})
 
 module.exports = app;
