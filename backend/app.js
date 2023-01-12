@@ -25,7 +25,11 @@ app.use((req, res, next) => {
 }); 
 
 app.use("/api/article", articleRoute);
-app.post('/api/contact', (req,res)=>{
+app.post("/api/contact", (req,res) => {
+  console.log("test 1 2 test");
+  res.status(200).json({confirmID:"d:p je suis une message de confirmation!!!!!!!!!!!!!!!!", ...req.body});
+});
+app.post('/api/addContact', (req,res)=>{
   const o = req.body
   // console.log(o);
   if(o.datas && o.datas.noms && o.datas.email && o.datas.age && o.datas.message)

@@ -1,0 +1,76 @@
+label {
+  display: block;
+}
+
+input:valid:not([type="submit"]), textarea.valid {
+  background: #adff2f;
+}
+
+input:invalid, textarea.invalid {
+  background: #ff4500;
+}
+
+input:placeholder-shown, textarea:placeholder-shown {
+  background: #f5f5f5;
+}
+
+body {
+  color: #fff;
+  background-color: #303030;
+  font-family: Calibri;
+  font-size: 1.2rem;
+}
+
+.container {
+  margin-bottom: 44px;
+  padding: 25px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 150%;
+}
+
+@media screen and (max-width: 780px) {
+  body {
+    font-size: 1.4rem;
+  }
+}
+
+.article {
+  border: none;
+}
+
+.article .card-header {
+  background-color: #343a40;
+}
+
+.article .card-body {
+  background-color: #0006;
+}
+
+.article .publication-date {
+  text-align: right;
+}
+
+.article .addFavorite {
+  font-size: 1.4rem;
+  position: absolute;
+  top: 80px;
+  right: 10px;
+}
+
+.article .addFavorite .far {
+  color: #0003;
+}
+
+.article .addFavorite:hover {
+  color: #ff0;
+  cursor: pointer;
+}
+
+.article .addFavorite.active {
+  color: #ff0;
+}
+
+/*# sourceMappingURL=index.a3e9af61.css.map */

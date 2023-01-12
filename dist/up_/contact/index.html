@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous">
+    <link rel="stylesheet" href="/index.a3e9af61.css">
+    <!-- <script src="../../../dist/contact.bundle.js" type="module" defer></script>
+    <script src="../../../dist/polyfill.bundle.js" type="module" defer></script> -->
+    <script src="/up_/contact/index.7a7b47a0.js" defer=""></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/index.html">Javanews</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/index.html">Les derniers articles</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav my-2 my-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/up_/favorites/index.html" title="Mes favoris"><i class="fas fa-star"></i></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/up_/contact/index.html" title="Contact"><i class="fas fa-envelope"></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="navbar fixed-bottom navbar-dark bg-dark">
+        <span class="navbar-text">
+            @copyrights Javanews 2021-2100
+        </span>
+    </nav>
+
+    <div class="container">
+        <h1>Contactez nous !</h1>
+        <form id="form" class="form row" action="../home/index.html">
+            <fieldset class="form-group col-12">
+                <label for="noms">Nom, Prénom</label>
+                <input id="noms" type="text" name="noms" class="form-control" pattern="[A-Z]+(, [A-Z][a-z]+)+" title="Séparer nom(CAPITAL) et prénoms(Titre) par une virgule et un espace" placeholder="ex: SMITH, John, Anderson" required="">
+            </fieldset>
+            <fieldset class="form-group col-12">
+                <label for="email">E-mail</label>
+                <input id="email" type="email" name="email" class="form-control" placeholder="exemple@email.com" required="">
+            </fieldset>
+            <fieldset class="form-group col-12">
+                <label for="age">Âge</label>
+                <input id="age" type="number" name="age" class="form-control" min="18" max="120" placeholder="Être majeur est nécessaire: 18-120 ans" required="">
+            </fieldset>
+            <fieldset class="form-group col-12">
+                <label for="message">Votre message</label>
+                <textarea id="message" name="message" class="form-control" rows="5" minlength="10" maxlength="5000" placeholder="Veuillez impérativement entrer un message (10-5000 caractères)" required=""></textarea>
+            </fieldset>
+            <fieldset class="form-group col-12">
+                <input type="submit" name="submit" class="btn btn-primary col-12" value="envoyer">
+            </fieldset>
+        </form>
+    </div>
+<script src="/contact.b03fa85b.js"></script></body>
+
+</html>
